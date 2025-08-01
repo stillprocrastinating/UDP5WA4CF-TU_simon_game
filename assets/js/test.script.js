@@ -41,4 +41,7 @@ describe("newGame tests", () => {
     test("game.currentGame.length = 0", () => {
         expect(game.currentGame.length).toBe(0);
     });
+    test("game.playerMoves.length = 0", () => {
+        expect(game.playerMoves.length).toBe(0);
+    });
 });
