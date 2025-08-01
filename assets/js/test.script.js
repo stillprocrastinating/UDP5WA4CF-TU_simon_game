@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-const { game, newGame } = require("game");
+const { game, newGame } = require("script");
 
 beforeAll(() => {
     let fs = require("fs");
@@ -31,9 +31,14 @@ describe("game object contains correct keys", () => {
 describe("newGame tests", () => {
     beforeAll(() => {
         game.score = 42;
+        game.currentGame = ["button1", "button2"];
+        game.playerMoves = ["button1", "button2"];
         newGame();
     });
     test("game.score = 0", () => {
         expect(game.score).toEqual(0);
+    });
+    test("game.currentGame.length = 0", () => {
+        expect(game.currentGame.length).toBe(0);
     });
 });
