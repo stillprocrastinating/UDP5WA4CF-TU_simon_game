@@ -6,7 +6,7 @@ const {game} = require("../game");
 
 beforeAll(() => {
     let fs = require("fs");
-    let fileContents = fs. readFileSync("index.html", "utf-8");
+    let fileContents = fs.readFileSync("index.html", "utf-8");
     document.body.innerHTML = fileContents;
 });
 
@@ -16,5 +16,8 @@ describe("game object contains correct keys", () => {
     });
     test("currentGame key exists", () => {
         expect("currentGame" in game).toBe(true);
+    });
+    test("playerMoves key exists", () => {
+        expect("playerMoves" in game).toBe(true);
     });
 });
