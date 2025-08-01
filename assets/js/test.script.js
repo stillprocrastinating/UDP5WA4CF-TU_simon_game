@@ -33,6 +33,7 @@ describe("newGame tests", () => {
         game.score = 42;
         game.currentGame = ["button1", "button2"];
         game.playerMoves = ["button1", "button2"];
+        document.getElementById("score").innerText = "42";
         newGame();
     });
     test("game.score = 0", () => {
@@ -43,5 +44,8 @@ describe("newGame tests", () => {
     });
     test("game.playerMoves.length = 0", () => {
         expect(game.playerMoves.length).toBe(0);
+    });
+    test("document#score = 0", () => {
+        expect(document.getElementById("score").innerText).toEqual(0);
     });
 });
