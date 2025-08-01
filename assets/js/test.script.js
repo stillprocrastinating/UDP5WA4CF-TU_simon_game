@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-const { game, newGame } = require("script");
+const { game, newGame, showScore } = require("script");
 
 beforeAll(() => {
     let fs = require("fs");
