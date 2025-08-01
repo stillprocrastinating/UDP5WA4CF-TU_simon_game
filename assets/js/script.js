@@ -7,6 +7,7 @@ let game = {
 
 function newGame() {
     game.score = 0;
+    game.currentGame = [];
 }
 
 module.exports = { game, newGame };
