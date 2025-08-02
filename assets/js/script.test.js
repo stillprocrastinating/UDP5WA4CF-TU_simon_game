@@ -69,4 +69,9 @@ describe("gameplay tests", () => {
         addTurn();
         expect(game.currentGame.length).toBe(2);
     });
+    test("button.classList = 'light'", () => {
+        let button = document.getElementById(game.currentGame[0]);
+        lightsOn(game.currentGame[0]);
+        expect(button.classList).toContain("light");
+    });
 });
