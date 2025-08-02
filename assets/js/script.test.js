@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-const { game, newGame, showScore, addTurn } = require("./script");
+const { game, newGame, showScore, addTurn, lightsOn } = require("./script");
 
 beforeAll(() => {
     let fs = require("fs");
@@ -69,7 +69,7 @@ describe("gameplay tests", () => {
         addTurn();
         expect(game.currentGame.length).toBe(2);
     });
-    test("button.classList = 'light'", () => {
+    test("button.classList = light", () => {
         let button = document.getElementById(game.currentGame[0]);
         lightsOn(game.currentGame[0]);
         expect(button.classList).toContain("light");
