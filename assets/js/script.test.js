@@ -39,8 +39,11 @@ describe("newGame tests", () => {
     test("game.score = 0", () => {
         expect(game.score).toEqual(0);
     });
-    test("game.currentGame.length = 0", () => {
-        expect(game.currentGame.length).toBe(0);
+    //test("game.currentGame.length = 0", () => {
+    //    expect(game.currentGame.length).toBe(0);
+    //});
+    test("game.currentGame.length = 1", () => {
+        expect(game.currentGame.length).toBe(1);
     });
     test("game.playerMoves.length = 0", () => {
         expect(game.playerMoves.length).toBe(0);
