@@ -74,4 +74,9 @@ describe("gameplay tests", () => {
         lightsOn(game.currentGame[0]);
         expect(button.classList).toContain("light");
     });
+    test("showTurns => game.turnNumber = 0", () => {
+        game.turnNumber = 42;
+        showTurns();
+        expect(game.turnNumber).toBe(0);
+    });
 });
