@@ -52,3 +52,21 @@ describe("newGame tests", () => {
         expect(document.getElementById("score").innerText).toEqual(0);
     });
 });
+
+describe("gameplay tests", () => {
+    beforeEach(() => {
+        game.score = 0;
+        game.currentGame = [];
+        game.playerMoves = [];
+        addTurn();
+    });
+    afterEach(() => {
+        game.score = 0;
+        game.currentGame = [];
+        game.playerMoves = [];
+    });
+    test("addTurn => game.currentGame.length = 2", () => {
+        addTurn();
+        expect(game.currentGame.length).toBe(2);
+    });
+});
