@@ -13,17 +13,20 @@ beforeAll(() => {
 });
 
 describe("game object contains correct keys", () => {
-    test("score key exists", () => {
-        expect("score" in game).toBe(true);
+    test("choices key exists", () => {
+        expect("choices" in game).toBe(true);
     });
     test("currentGame key exists", () => {
         expect("currentGame" in game).toBe(true);
     });
+    test("lastButton key exists", () => {
+        expect("lastButton" in game).toBe(true);
+    });
     test("playerMoves key exists", () => {
         expect("playerMoves" in game).toBe(true);
     });
-    test("choices key exists", () => {
-        expect("choices" in game).toBe(true);
+    test("score key exists", () => {
+        expect("score" in game).toBe(true);
     });
     test("turnNumber key exists", () => {
         expect("turnNumber" in game).toBe(true);
