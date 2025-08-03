@@ -54,6 +54,12 @@ describe("newGame tests", () => {
     test("document#score = 0", () => {
         expect(document.getElementById("score").innerText).toEqual(0);
     });
+    test("data-listener = true", () => {
+        const elements = document.getElementsByClassName("circle");
+        for (let element of elements) {
+            expect(element.getAttribute("data-listener")).toEqual("true");
+        }
+    });
 });
 
 describe("gameplay tests", () => {
