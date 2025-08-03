@@ -100,4 +100,8 @@ describe("gameplay tests", () => {
         playerTurn();
         expect(window.alert).toBeCalledWith("Wrong move!");
     });
+    test("showTurns => turnInProgress = true", () => {
+        showTurns();
+        expect(game.turnInProgress).toBe(true);
+    });
 });
