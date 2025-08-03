@@ -1,9 +1,10 @@
 let game = {
-    score: 0,
-    currentGame: [],
-    playerMoves: [],
-    turnNumber: 0,
     choices: ["button1", "button2", "button3", "button4"],
+    currentGame: [],
+    lastButton: "",
+    playerMoves: [],
+    score: 0,
+    turnNumber: 0,
 }
 
 function addTurn() {
