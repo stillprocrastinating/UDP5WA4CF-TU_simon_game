@@ -37,6 +37,9 @@ describe("game object contains correct keys", () => {
     test("choices ids exist", () => {
         expect(game.choices).toEqual(["button1", "button2", "button3", "button4"]);
     });
+    test("turnInProgress value = false", () => {
+        expect("turnInProgress" in game).toBe(true);
+    });
 });
 
 describe("newGame tests", () => {
