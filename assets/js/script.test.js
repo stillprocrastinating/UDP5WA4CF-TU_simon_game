@@ -4,6 +4,8 @@
 
 const { game, addTurn, lightsOn, newGame, playerTurn, showScore, showTurns } = require("./script");
 
+jest.spyOn(window, "alert").mockImplementation(() => {});
+
 beforeAll(() => {
     let fs = require("fs");
     let fileContents = fs.readFileSync("index.html", "utf-8");
@@ -92,5 +94,10 @@ describe("gameplay tests", () => {
         game.playerMoves.push(game.currentGame[0]);
         playerTurn();
         expect(game.score).toBe(1);
+    });
+    test("playerMoves = wrong => playerTurn => alert = Wrong move!", () => {
+        game.playerMoves.push("wrong");
+        playerTurn();
+        expect(window.alert).toBeCalledWith("Wrong move!");
     });
 });
