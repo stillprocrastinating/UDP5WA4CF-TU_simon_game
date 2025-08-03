@@ -38,6 +38,17 @@ function newGame() {
     addTurn();
 }
 
+function playerTurn () {
+    let i = game.playerMoves.length - 1;
+    if (game.currentGame[i] === game.playerMoves[i]) {
+        if (game.currentGame.length == game.playerMoves.length) {
+            game.score++;
+            showScore();
+            addTurn();
+        }
+    }
+}
+
 function showScore() {
     document.getElementById("score").innerText = game.score;
 }
@@ -53,4 +64,4 @@ function showTurns() {
     }, 800);
 }
 
-module.exports = { game, addTurn, lightsOn, newGame, showScore, showTurns };
+module.exports = { game, addTurn, lightsOn, newGame, playerTurn, showScore, showTurns };
