@@ -104,4 +104,10 @@ describe("gameplay tests", () => {
         showTurns();
         expect(game.turnInProgress).toBe(true);
     });
+    test("showTurns => lastButton = null => click test", () => {
+        showTurns();
+        game.lastButton = "";
+        document.getElementById("button2").click();
+        expect(game.lastButton).toEqual("");
+    });
 });
