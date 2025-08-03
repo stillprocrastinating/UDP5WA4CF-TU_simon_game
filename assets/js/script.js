@@ -4,7 +4,7 @@ let game = {
     lastButton: "",
     playerMoves: [],
     score: 0,
-    turnInProgress: undefined,
+    turnInProgress: false,
     turnNumber: 0,
 }
 
