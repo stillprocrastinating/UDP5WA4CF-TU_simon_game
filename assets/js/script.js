@@ -60,12 +60,14 @@ function showScore() {
 }
 
 function showTurns() {
+    game.turnInProgress = true;
     game.turnNumber = 0;
     let turns = setInterval(() => {
         lightsOn(game.currentGame[game.turnNumber]);
         game.turnNumber++;
         if (game.turnNumber >= game.currentGame.length) {
             clearInterval(turns);
+            game.turnInProgress = false;
         }
     }, 800);
 }
